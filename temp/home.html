@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+
+<head>
+    	{% load static %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+    <title>Friendship Dare</title>
+    <meta name="description" content="2020 Friendship Dare">
+    <meta property="og:title" content="2020 Friendship Dare" />
+    <meta property="og:image" content="bond.png">
+
+    <meta property="og:description" content="2020 Friendship Dare">
+
+    <link rel="stylesheet" href="{% static 'css/a.css' %}">
+    <link rel="stylesheet" href="{% static 'css/b.css' %}">
+    <link rel="stylesheet" href="{% static 'css/c.css' %}">
+
+    <style>
+        .pure-button-primary,
+        .pure-button-color,
+        .custom-menu-wrapper {
+            background-color: #99003b !important;
+        }
+        
+        .ready {
+            color: #99003b;
+        }
+        
+        .number_list .active {
+            background: #99003b;
+            color: #fff;
+        }
+    </style>
+
+    <meta name="msapplication-config" content="none" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'img/icon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'img/icon.png' %}" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function setCookie1(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
+        }
+
+        function getCookie1(cname) {
+            var name = cname + "=";
+            var cookie = document.cookie;
+            var ca = cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return decodeURIComponent(c.substring(name.length, c.length));
+                }
+            }
+            return "";
+        }
+    </script>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+    <div class="custom-menu-wrapper">
+
+        <div class="pure-menu custom-menu custom-menu-top">
+            <span><img src="{% static 'img/icon.png' %}" alt="" style="display: inline; width: 25px; position: absolute;"></span>
+            <a href="/" class="pure-menu-heading custom-menu-brand" style="display: inline; left: 30px;text-transform: none;font-weight: 600;">2020 Friendship Dare</a>
+        </div>
+
+
+    </div>
+    <div class="outer_container tenpxtop">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz_block tenpxtop">
+            <div class="pure-g">
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+                <div class="pure-u-11-12 pure-u-md-1-2 well center">
+                    <a href="tfquiz">
+                        <img src="{% static 'img/tf/tf.png' %}" alt="" style="max-width: 200px">
+                        <h2 class="fivepxtop fivepxbottom">TRUE or FALSE</h2>
+                    </a>
+                </div>
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz_block tenpxtop">
+            <div class="pure-g">
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+                <div class="pure-u-11-12 pure-u-md-1-2 well center">
+                    <a href="ynquiz">
+                        <img src="{% static 'img/yn/yn.png' %}" alt="" style="max-width: 200px">
+                        <h2 class="fivepxtop fivepxbottom">Yes No Challenge</h2>
+                    </a>
+                </div>
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            </div>
+        </div>
+
+
+        <div class="quiz_block tenpxtop">
+            <div class="pure-g">
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+                <div class="pure-u-11-12 pure-u-md-1-2 well center">
+                    <a href="tquiz">
+                        <img src="{% static 'img/19/19.png' %}" alt="" style="max-width: 200px">
+                        <h2 class="fivepxtop fivepxbottom">2020 Friendship Dare</h2>
+                    </a>
+                </div>
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            </div>
+        </div>
+
+
+        <div class="quiz_block tenpxtop">
+            <div class="pure-g">
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+                <div class="pure-u-11-12 pure-u-md-1-2 well center">
+                    <a href="ynnquiz">
+                        <img src="{% static 'img/yn/yn.png' %}" alt="" style="max-width: 200px">
+                        <h2 class="fivepxtop fivepxbottom">True False Quiz</h2>
+                    </a>
+                </div>
+                <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+<footer>
+
+    <br>
+    <br><br>
+
+    <hr>
+    <p class="center">
+        <a href="contact">Contact</a>
+        <br>
+        <a href="privacy">Privacy Policy</a> &nbsp;
+        <a href="disclaimer">Disclaimer</a>
+        <br><br>
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://dare2019.com/common/js/helper.js?v=7"></script>
+
+
+    <script>
+        var analytics = '130288435';
+    </script>
+
+
+    <script>
+        // Set it while attempting quiz
+        var country = '';
+        var language = '';
+
+        if (getCookie('country') == null || getCookie('country') == '') {
+            country = "";
+            setCookie('country', country);
+        }
+
+        if (getCookie('language') == null || getCookie('language') == '') {
+            language = "";
+            setCookie('language', language);
+        }
+
+        var copied = 'Copied';
+        var title = '&quot;nameeee - 2020 Friendship Dare&quot;'.replace(/(&quot\;)/g, "");
+        var description = '&quot;\ud83e\udd1c nameeee has sent you real *2020 Friendship Challenge* \ud83d\udc78\ud83e\udd34\ufe0f%0A\ud83c\udfaf *Accept this Challenge NOW* \ud83e\udd47\ud83e\udd48\ud83e\udd49%0A\u203c\ufe0f\ud83d\udc47\ud83d\udc47\ud83d\udc47\u203c\ufe0f %0A &quot;'.replace(/(&quot\;)/g, "");;
+        var description_addthis = '&quot;\ud83e\udd1c nameeee has sent you real 2020 Friendship Challenge \ud83d\udc78\ud83e\udd34\ufe0f. \n\t\t\ud83c\udfaf Accept this Challenge NOW \ud83e\udd47\ud83e\udd48\ud83e\udd49\n\t\t\u203c\ufe0f\ud83d\udc47\ud83d\udc47\ud83d\udc47\u203c\ufe0f\n\t\t&quot;'.replace(/(&quot\;)/g, "");;
+
+        var menu = '';
+        var quizid = '';
+        var domain = 'https://dare2019.com';
+        var locale = 'en';
+        var api_slug = 'd2019';
+        var api_domain = 'https://api.truefalse.site';
+        var questions_count = '15';
+
+
+        var quizurl = '/quiz';
+        var quiz_slug = '';
+
+        if (getCookie('color') == '') {
+            setCookie('color', '#99003b');
+        }
+
+        var log_skip_events = 0;
+
+        if (domain == 'https://truefalse.site' || domain == 'https://dare2019.com' || domain == 'https://testyourbond.site' || domain == 'https://yaynayquiz.com' || domain == 'https://yesno.site' || domain == 'https://yearbook19.com' || domain == 'https://superdare.site' || domain == 'https://truefriend.site' || domain == 'https://realbuddy.site' || domain == 'https://yatidak.site' || domain == 'https://friend2020.com' || domain == 'https://teraviz.com' || domain == 'https://quiz2020.com') {
+
+            if (getCookie('registered_quiz_id') > 5000000) {
+                setCookie("registered_quiz_id", '');
+            }
+        }
+    </script>
+
+
+    <script src="https://dare2019.com/js/script.js?b=31"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script>
+        var clipboardDemos = new ClipboardJS('[data-clipboard]');
+        clipboardDemos.on('success', function(e) {
+            e.clearSelection();
+            showTooltip(e.trigger, copied);
+        });
+        clipboardDemos.on('error', function(e) {
+            showTooltip(e.trigger, fallbackMessage(e.action));
+        });
+
+
+        // Tooltip code
+        var btns = document.querySelectorAll('.copy-btn');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('mouseleave', clearTooltip);
+            btns[i].addEventListener('blur', clearTooltip);
+        }
+
+        function clearTooltip(e) {
+            e.currentTarget.removeAttribute('aria-label');
+        }
+
+        function showTooltip(elem, msg) {
+            $('.copy-btn').addClass('tooltipped');
+            $('.copy-btn').addClass('tooltipped-s');
+            elem.setAttribute('aria-label', msg);
+        }
+
+        function fallbackMessage(action) {
+            var actionMsg = '';
+            var actionKey = (action === 'cut' ? 'X' : 'C');
+            if (/iPhone|iPad/i.test(navigator.userAgent)) {
+                actionMsg = 'No support :(';
+            } else if (/Mac/i.test(navigator.userAgent)) {
+                actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+            } else {
+                actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+            }
+            return actionMsg;
+        }
+    </script>
+
+
+
+
+
+</footer>
+
+</html>

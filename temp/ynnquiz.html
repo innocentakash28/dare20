@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="quiz" />
+
+
+
+
+
+
+
+    <title>True False Quiz</title>
+    <meta name="description" content="How well do you know your friends? Take this simple True False Quiz and find out. Yes or No">
+    <meta property="og:title" content="True False Quiz" />
+    <meta property="og:image" content="https://dare2019.com/images/yaynay/bond.png">
+
+    <meta property="og:description" content="How well do you know your friends? Take this simple True False Quiz and find out. Yes or No">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href="https://dare2019.com/css/style.css?v=36">
+
+
+    <style>
+        .pure-button-primary,
+        .pure-button-color,
+        .custom-menu-wrapper {
+            background-color: #b32913 !important;
+        }
+        
+        .ready {
+            color: #b32913;
+        }
+        
+        .number_list .active {
+            background: #b32913;
+            color: #fff;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="msapplication-config" content="none" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://dare2019.com/images/yaynay/icon.png?v=4" />
+    <link rel="apple-touch-icon" href="https://dare2019.com/images/yaynay/icon.png?v=4" />
+    <link rel="apple-touch-icon-precomposed" href="https://dare2019.com/images/yaynay/icon.png?v=4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function setCookie1(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
+        }
+
+        function getCookie1(cname) {
+            var name = cname + "=";
+            var cookie = document.cookie;
+            var ca = cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return decodeURIComponent(c.substring(name.length, c.length));
+                }
+            }
+            return "";
+        }
+    </script>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+    <div class="custom-menu-wrapper">
+
+        <div class="pure-menu custom-menu custom-menu-top">
+            <span><img src="https://dare2019.com/images/yaynay/icon.png?v=4" alt="" style="display: inline; width: 25px; position: absolute;"></span>
+            <a href="/" class="pure-menu-heading custom-menu-brand" style="display: inline; left: 30px;text-transform: none;font-weight: 600;">True False Quiz</a>
+        </div>
+
+
+    </div>
+    <div class="outer_container tenpxtop">
+
+
+
+        <div class="pure-g">
+
+            <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            <div class="pure-u-11-12 pure-u-md-1-2 well">
+
+
+
+                <div class="center">
+                    <div class="center">
+                        <div id="visited-ad">
+
+                        </div>
+                        <script>
+                            if (getCookie1('visited') == '' || parseInt(getCookie1('visited')) < 4) {
+                                document.getElementById("visited-ad").outerHTML = "";
+                            }
+                        </script>
+                    </div>
+                </div>
+
+
+                <div id="question_count" class="hidden fivepxtop">
+                    <ul class="number_list center">
+                        <li id='number_1' class="active">1</li>
+                        <li id='number_2'>2</li>
+                        <li id='number_3'>3</li>
+                        <li id='number_4'>4</li>
+                        <li id='number_5'>5</li>
+                        <li id='number_6'>6</li>
+                        <li id='number_7'>7</li>
+                        <li id='number_8'>8</li>
+                        <li id='number_9'>9</li>
+                        <li id='number_10'>10</li>
+                        <li id='number_11'>11</li>
+                        <div class="visible-xs fivepxtop"></div>
+                        <li id='number_12'>12</li>
+                        <li id='number_13'>13</li>
+                        <li id='number_14'>14</li>
+                        <li id='number_15'>15</li>
+                    </ul>
+                </div>
+
+
+
+                <h3 class="fivepxtop hidden" id="">
+                    Creating quiz...
+                    <span id="question_number">0</span>/15
+                </h3>
+
+
+                <div id="share_link_generating" class="hidden center">
+                    <h3 class="fivepxbotton">Please Wait...</h3>
+                    <h3 class="fivepxbotton fivepxtop">Creating quiz... </h3>
+                    <div class="loader center" style="display: inline-block;"></div>
+                </div>
+
+
+                <div id="recreate_quiz" class="hidden center">
+                    <h3 class="fivepxbotton">Some error occured... Please create your quiz again after 5 mins</h3>
+                    <a href="ynnquiz" class="pure-button pure-button-primary full">👉 Create your Quiz</a>
+                </div>
+
+                <div id="initial_block" class="center hidden">
+                    <h3 class="fivepxbotton">Please Wait...</h3>
+                    <h3 class="fivepxbotton fivepxtop">Preparing Questions list for you.</h3>
+                </div>
+
+                <div id="name_email_info" class="pure-form pure-form-stacked">
+                    <div class="pure-g">
+
+                        <div class="pure-u-1">
+                            <h3 class="center fivepxtop quiz_heading">
+                                <img src="https://dare2019.com/images/yaynay/left.png?v=4" style="height: 18px;"> True False Quiz
+                                <img src="https://dare2019.com/images/yaynay/right.png?v=4" style="height: 18px;">
+                            </h3>
+                        </div>
+
+                        <div class="pure-u-1">
+                            <label>
+                    <h4 class="fivepxbottom tenpxtop ">Select Language : </h4>
+                </label>
+
+                            <select id="language" class="pure-u-1">
+                    <option value="" disabled="" selected="" hidden="">Select Language</option>
+                    <option value='en'>English</option><option value='de'>Deutsch</option><option value='es'>Español</option><option value='fr'>Français</option><option value='id'>Bahasa Indonesia</option><option value='it'>Italiano</option><option value='pt'>Português</option><option value='ru'>Русский</option><option value='tr'>Türkçe</option><option value='ar'>عربى</option><option value='hi'>हिंदी</option><option value='uk'>Украiнська</option><option value='hr'>hrvatski</option><option value='il'>עברית</option><option value='vn'>Tiếng Việt</option><option value='th'>ไทย</option>
+                </select>
+                        </div>
+
+
+                        <div class="pure-u-1">
+                            <label>
+                    <h4 class="fivepxbottom tenpxtop ">Enter your Full Name : </h4>
+                </label>
+                            <input id="name" class="pure-u-1" type="text" placeholder="Full Name">
+                            <span id="name_error" class="error hidden">Name Cannot be Blank</span>
+                        </div>
+
+                        <div class="pure-u-1">
+                            <a id="start_create" href="javascript:void(0)" class="pure-button pure-button-primary full">👉&nbsp;  Start &nbsp;👈</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="questions_block" class="hidden center">
+
+
+
+                    <div id="eg" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you Secretly like Someone?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="em" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you believe in Love at First Sight?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ej" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Are you Happy with your Life?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ee" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like Pizza/Burger?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ei" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like reading books?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="en" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you believe in Luck/Fate?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ei1" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like Chocolates?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="eh" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like to travel?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ef" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like to Party?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="el" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Are you Hiding something from everyone?
+                        </h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ea" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like Shopping?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="eb" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you like to watch Movies/TV?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ec" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Do you have Girlfriend/Boyfriend?</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="eo" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Just click Yes for this one.</h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="ek" class="question hidden unanswered" language="en">
+
+                        <h3 class="fivepxbotton tenpxtop center question_text">Are you Addicted to your Mobile Phone?
+                        </h3>
+
+                        <table class="pure-table pure-table-horizontal table_spacing">
+
+
+                            <tr>
+                                <td value='a' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/a.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">Yes</div>
+                                </td>
+                                <td value='b' class="set_answer center">
+                                    <img data-src="https://dare2019.com/images/yaynay/question_images/q/b.png?v=5" alt="">
+                                    <br>
+                                    <div class="fivepxtop" style="font-size: 20px">No</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div id="share" class="hidden center">
+                    <h2 class="ready fivepxbottom zerotop">Your Challenge is Ready</h2>
+                    <h4 class="fivepxbottom fivepxtop">Share this link with your friends</h4>
+
+                    <textarea class="pure-input-1 pure-u-1" rows="2" id="newquizid"></textarea>
+
+                    <div class="pure-g center tenpxbottom">
+
+                        <div class="pure-u-1">
+                            <button class="copy-btn pure-button pure-button-color tenpxtop fivepxbottom" data-clipboard="" data-clipboard-target="#newquizid">
+        Copy this link
+    </button>
+                        </div>
+
+
+
+
+
+                        <div class="pure-u-1 pure-u-md-1-2 " style="margin: auto">
+                            <a id="whatsapp_link" href="" target="_blank" class="tenpxtop pure-button whatsapp_button">
+                                <img src="https://dare2019.com/images/common/whatsapp.svg" alt="" width="18px" height="18px"> &nbsp;
+                                <span class="whatsapp_status_text">Whatsapp Status</span>
+                            </a>
+                        </div>
+
+                        <div class="pure-u-1 pure-u-md-1-2" style="margin: auto">
+                            <a href="#insta_popup" class="tenpxtop pure-button instagram_button">
+                                <span class="instagram_status_text">Add to Instagram Bio</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="addthis_share addthis_inline_share_toolbox_yaj3"></div>
+
+
+                    <!-- insta popup -->
+                    <div id="insta_popup" class="overlay left">
+                        <div class="popup">
+                            <h3 class="color center fivepxbottom">How to add this link to your Instagram BIO.</h3>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content left">
+                                <ul class="fivepxtop">
+                                    <li>Copy your link</li>
+                                    <li>Go on your profile in the app</li>
+                                    <li>Click on Edit Profile</li>
+                                    <li>Paste the link under Website section</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <span class="center view_results_bottom">
+            <a href="" class="pure-button pure-button-primary full">👉 View Results</a>
+        </span>
+                </div>
+
+            </div>
+            <div class="pure-u-1-24 pure-u-md-1-4"></div>
+
+
+
+            <div class="pure-u-1-24 pure-u-md-1-4"></div>
+            <div class="pure-u-11-12 pure-u-md-1-2 center">
+                <br>
+
+                <div class="center tenpxtop">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7987274387882394" data-ad-slot="4119578661" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <p class="tenpxtop">Select your Country, Enter your Name, Email, Create your Quiz and Share it with your friends on Facebook or Whatsapp. Once your friends attempt the quiz you will see the results on leaderboard.</p>
+            </div>
+            <div class="pure-u-1-24 pure-u-md-1-4"></div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<footer>
+
+    <br>
+    <br><br>
+
+    <hr>
+    <p class="center">
+        <a href="contact">Contact</a>
+        <br><br>
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://dare2019.com/common/js/helper.js?v=7"></script>
+
+
+    <script>
+        var analytics = '130288435';
+    </script>
+
+
+    <script>
+        // Set it while attempting quiz
+        var country = '';
+        var language = '';
+
+        if (getCookie('country') == null || getCookie('country') == '') {
+            country = "";
+            setCookie('country', country);
+        }
+
+        if (getCookie('language') == null || getCookie('language') == '') {
+            language = "";
+            setCookie('language', language);
+        }
+
+        var copied = 'Copied';
+        var title = '&quot;Play True False Game with nameeee&quot;'.replace(/(&quot\;)/g, "");
+        var description = '&quot;How well do you know nameeee? Take this simple True False Quiz and find out.&quot;'.replace(/(&quot\;)/g, "");;
+        var description_addthis = '&quot;How well do you know nameeee? \n\t\tTake this simple True False Quiz and find out. \n\t\t\ud83d\udc47\u2764\ufe0f\ud83d\udc47\ud83d\udc47\ud83d\udc47\u2764\ufe0f\ud83d\udc47 &quot;'.replace(/(&quot\;)/g, "");;
+
+        var menu = 'register';
+        var quizid = '';
+        var domain = 'https://dare2019.com';
+        var locale = 'en';
+        var api_slug = 'yn';
+        var api_domain = 'https://api.truefalse.site';
+        var questions_count = '15';
+
+
+        var quizurl = '/yn/quiz';
+        var quiz_slug = 'yn';
+
+        if (getCookie('color') == '') {
+            setCookie('color', '#b32913');
+        }
+
+        var log_skip_events = 0;
+
+        if (domain == 'https://truefalse.site' || domain == 'https://dare2019.com' || domain == 'https://testyourbond.site' || domain == 'https://yaynayquiz.com' || domain == 'https://yesno.site' || domain == 'https://yearbook19.com' || domain == 'https://superdare.site' || domain == 'https://truefriend.site' || domain == 'https://realbuddy.site' || domain == 'https://yatidak.site' || domain == 'https://friend2020.com' || domain == 'https://teraviz.com' || domain == 'https://quiz2020.com') {
+
+            if (getCookie('registered_quiz_id') > 5000000) {
+                setCookie("registered_quiz_id", '');
+            }
+        }
+    </script>
+
+
+    <script src="https://dare2019.com/js/script.js?b=31"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script>
+        var clipboardDemos = new ClipboardJS('[data-clipboard]');
+        clipboardDemos.on('success', function(e) {
+            e.clearSelection();
+            showTooltip(e.trigger, copied);
+        });
+        clipboardDemos.on('error', function(e) {
+            showTooltip(e.trigger, fallbackMessage(e.action));
+        });
+
+
+        // Tooltip code
+        var btns = document.querySelectorAll('.copy-btn');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('mouseleave', clearTooltip);
+            btns[i].addEventListener('blur', clearTooltip);
+        }
+
+        function clearTooltip(e) {
+            e.currentTarget.removeAttribute('aria-label');
+        }
+
+        function showTooltip(elem, msg) {
+            $('.copy-btn').addClass('tooltipped');
+            $('.copy-btn').addClass('tooltipped-s');
+            elem.setAttribute('aria-label', msg);
+        }
+
+        function fallbackMessage(action) {
+            var actionMsg = '';
+            var actionKey = (action === 'cut' ? 'X' : 'C');
+            if (/iPhone|iPad/i.test(navigator.userAgent)) {
+                actionMsg = 'No support :(';
+            } else if (/Mac/i.test(navigator.userAgent)) {
+                actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+            } else {
+                actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+            }
+            return actionMsg;
+        }
+    </script>
+
+
+
+
+
+</footer>
+
+</html>
